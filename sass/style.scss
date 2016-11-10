@@ -1,0 +1,28 @@
+$font: -apple-system, BlinkMacSystemFont;
+$col: #0f0;
+$bg: #222;
+
+html, * {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $font, sans-serif;
+	letter-spacing: 0.0125em;
+	background: $bg;
+	color: $col;
+	/* LAYOUT */
+	height: 92vh;
+	padding: 1em 0 0 2em;
+	/* FLEX */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+h1 {
+	font-size: 4em;
+	font-weight: 700;
+}
