@@ -41,7 +41,7 @@ app.get( '/json', sendJson );
 
 var server = app.listen( port );
 
-console.log( 'server started on port %s', listen[ 1 ] );
+console.log( 'server started on port %s', port );
 
 function addWord( req, res ) {
   var reply;
