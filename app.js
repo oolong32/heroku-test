@@ -4,8 +4,7 @@ var sassMiddleware = require( 'node-sass-middleware' );
 var morgan = require( 'morgan' );
 var path = require( 'path' );
 var app = express();
-//var port = 62370; // geht nicht mehr, wegen ipv6 prefix
-var listen = ['::ffff:127.0.0.1', 62370];
+var port = process.env.PORT;
 
 var words = {
   'foo': 2,
@@ -40,8 +39,7 @@ app.get( '/add/:word/:score', addWord );
 app.get( '/search/:word', retrieveWord );
 app.get( '/json', sendJson );
 
-var server = app.listen( listen[ 1 ], listen[ 0 ] );
-// var io = socket( server );
+var server = app.listen( port );
 
 console.log( 'server started on port %s', listen[ 1 ] );
 
