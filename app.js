@@ -4,7 +4,7 @@ var sassMiddleware = require( 'node-sass-middleware' );
 var morgan = require( 'morgan' );
 var path = require( 'path' );
 var app = express();
-var port = process.env.PORT;
+var port = process.env.PORT || 3000;
 
 var words = {
   'foo': 2,
@@ -77,8 +77,8 @@ function retrieveWord( req, res ) {
       'word': word,
       'score': null
     }
-    res.send( reply );
   }
+  res.send( reply );
 }
 
 function sendJson( req, res ) {
